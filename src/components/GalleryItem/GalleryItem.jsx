@@ -29,7 +29,9 @@ function GalleryItem( props ) {
     <div className="imgBox" onClick={() => toggle()}>
       {click ? <img src={imageData.path} alt={imageData.description}></img> : <p>{imageData.description}</p>}
       </div>
-    <p>{imageData.likes} people loved this!</p>
+    {imageData.likes === 0 ? <p>No one has loves this image yet.</p> : imageData.likes === 1 ? <p>{imageData.likes} person loved this image!</p> :
+    <p>{imageData.likes} people loved this image!</p>}
+    
     <button onClick={() => incrementLikes()}>Love it!</button>
     </>
   )
