@@ -13,9 +13,6 @@ This project displays pictures with a description that can be obtained by clicki
 
 It took a little bit to remember how to load something from a server file as I have gotten used to using a database. In a future update I may set up a database for this project but I wanted to ensure I met the base requirements for the assignment first. Another issue I ran into during development was the app trying to run the functions that rendered the images and data before it was received from the server files. I fixed this by using an if statement to load an empty div if the array variable was still empty. The last issue I ran into was trying to call a function to change the value of the hook that I used to determine if the image or its description were displayed caused an infinity loop. After some research, I found that a common solution to this problem is to have onClick run an anonymous function to call the function rather than calling the function directly (onClick={() => functionName()} vs. onClick={functionName()}).
 
-
-To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.heroku.com)
-
 ## Screen Shot
 
 ![screen shot one](screen-shot-1.png)
