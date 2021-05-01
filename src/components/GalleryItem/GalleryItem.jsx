@@ -1,14 +1,21 @@
-import './GalleryItem.css'
+import {useState} from 'react';
+import './GalleryItem.css';
 
 function GalleryItem( props ) {
 
   let imageData = props.imageData;
   console.log(imageData);
 
+  const [click, setClick] = useState(true);
+  const toggle = () => setClick(!click);
+  console.log(click);
+
   return(
     <>
     {}
-    <div className="imgBox"><img src={imageData.path} alt={imageData.description}></img></div>
+    <div className="imgBox" onClick={() => toggle()}>
+      {click ? <img src={imageData.path} alt={imageData.description}></img> : <p>{imageData.description}</p>}
+      </div>
     <p>{imageData.likes} people loved this!</p>
     </>
   )
