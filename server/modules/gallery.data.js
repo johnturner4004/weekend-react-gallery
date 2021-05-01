@@ -1,5 +1,5 @@
+// Array of photo data containing id, path, description, and initial number of likes
 const galleryItems = [
-    // { id: 1, path: 'images/goat_small.jpg', description: 'Photo of a goat taken at Glacier National Park.', likes: 0 }
     { id: 1, path: 'images/IMG_0986.jpg', description: 'Photo of Blake climbing up the hallway.', likes: 0},
     { id: 2, path: 'images/IMG_1001.jpg', description: 'Photo of Blake and Aria in the hospital', likes: 0},
     { id: 3, path: 'images/IMG_1191.jpg', description: 'Photo of Blake and Aria playing Mario Kart.', likes: 0},

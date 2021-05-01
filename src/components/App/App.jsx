@@ -5,12 +5,14 @@ import "./App.css";
 import GalleryList from "../GalleryList/GalleryList.jsx";
 
 function App() {
+  // hook to store picture array which contains necessary info about the pictures
   const [pictureArray, setPictureArray] = useState();
 
   useEffect(() => {
     getPicture();
   }, []);
 
+  // gets picture data from the server and stores it in pictureArray
   function getPicture() {
     axios
       .get("/gallery")
@@ -22,29 +24,24 @@ function App() {
         console.log("unable to get pictures", error);
         alert("unable to get pictures from server");
       });
-    console.log("pictures", pictureArray);
     return (pictureArray)
   }
 
+  // renders page elements
   return (
     <div className="App">
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
-      {
+      
+      {// prevents GalleryList from running until picture data is received from the server
         pictureArray ?
-        // insert your content here
+        // GalleryList sets up page elements where pictures will be displayed
         <GalleryList pictureArray={pictureArray, getPicture()} />
       :
-        // add a loader or an empty div here
+        // Empty div to render until pictureArray is filled
         <div></div>
     }
-      {
-        console.log(
-          pictureArray
-        ) /* <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg"/> */
-      }
     </div>
   );
 }
