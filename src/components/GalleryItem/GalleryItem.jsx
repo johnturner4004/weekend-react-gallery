@@ -1,3 +1,5 @@
+import './GalleryItem.css'
+
 function GalleryItem( props ) {
 
   let imageData = props.imageData;
@@ -5,9 +7,8 @@ function GalleryItem( props ) {
 
   return(
     <>
-    <img src={imageData.path} alt={imageData.description} width="500" height="500"></img>
-    <p>Gallery goes here</p>
-    <img src="images/goat_small.jpg"/>
+    <div className="imgBox"><img src={imageData.path} alt={imageData.description}></img></div>
+    <p>{imageData.likes} people loved this!</p>
     </>
   )
 }

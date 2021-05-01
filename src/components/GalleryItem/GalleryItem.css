@@ -1,0 +1,11 @@
+.imgBox {
+  height:200px;
+  width: 200px;
+}
+
+.imgBox img{
+  height: auto;
+  width: auto;
+  max-height: 200px;
+  max-width: 200px;
+}
