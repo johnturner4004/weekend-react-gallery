@@ -7,6 +7,7 @@ function GalleryItem( props ) {
 
   return(
     <>
+    {}
     <div className="imgBox"><img src={imageData.path} alt={imageData.description}></img></div>
     <p>{imageData.likes} people loved this!</p>
     </>
