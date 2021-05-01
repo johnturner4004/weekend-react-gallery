@@ -34,7 +34,7 @@ function App() {
       {
         pictureArray ?
         // insert your content here
-        <GalleryList pictureArray={pictureArray} />
+        <GalleryList pictureArray={pictureArray, getPicture()} />
       :
         // add a loader or an empty div here
         <div></div>
